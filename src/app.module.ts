@@ -17,7 +17,8 @@ import { UsersModule } from './users/users.module';
       synchronize: true, // Solo en desarrollo
     }),
     UsersModule, // Importa el módulo de usuarios
-  ],  controllers: [AppController],
+  ],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
