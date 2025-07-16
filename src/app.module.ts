@@ -10,7 +10,7 @@ import { MlpViewModule } from './mlp-view/mlp-view.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '192.168.1.98', // IP del servidor de la base de datos
+      host: '192.168.3.5', // IP del servidor de la base de datos
       port: 3306,
       username: 'server_db',
       password: '!MyStrongPass123#', // La contraseña del usuario creado
