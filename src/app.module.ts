@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
+import { User } from './users/user.entity';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { UsersModule } from './users/users.module';
       username: 'server_db',
       password: '!MyStrongPass123#', // La contraseña del usuario creado
       database: 'test', // Nombre de la base de datos que usarás
-      entities: [],
+      entities: [User], // Asegúrate de incluir la entidad User aquí
       synchronize: true, // Solo en desarrollo
     }),
     UsersModule, // Importa el módulo de usuarios
