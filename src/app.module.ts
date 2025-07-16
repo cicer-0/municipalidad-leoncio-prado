@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { User } from './users/user.entity';
+import { MlpViewModule } from './mlp-view/mlp-view.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { User } from './users/user.entity';
       entities: [User], // Asegúrate de incluir la entidad User aquí
       synchronize: true, // Solo en desarrollo
     }),
-    UsersModule, // Importa el módulo de usuarios
+    UsersModule,
+    MlpViewModule, // Importa el módulo de usuarios
   ],
   controllers: [AppController],
   providers: [AppService],
